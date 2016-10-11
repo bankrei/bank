@@ -19,7 +19,7 @@ input[type=number]{
 <td><input type=number ID="QPRC" onChange="mult(this.id,.5,'QPrval');add('QProwval','QPrval','QP',1);">
 <input type=hidden ID="QPrval"></td>
 <td></td>
-<td>$<input type=number ID="QP" style=number onChange="sum();"></td>
+<td>$<input type=number ID="QP" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>Nickels</td>
@@ -28,7 +28,7 @@ input[type=number]{
 <td><input type=number ID="QNRC" onChange="mult(this.id,2,'QNrval');add('QNrowval','QNrval','QN',1);">
 <input type=hidden ID="QNrval"></td>
 <td></td>
-<td>$<input type=number ID="QN" style=number onChange="sum();"></td>
+<td>$<input type=number ID="QN" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>Dimes</td>
@@ -37,7 +37,7 @@ input[type=number]{
 <td><input type=number ID="QDRC" onChange="mult(this.id,5,'QDrval');add('QDrowval','QDrval','QD',1);">
 <input type=hidden ID="QDrval"></td>
 <td></td>
-<td>$<input type=number ID="QD" style=number onChange="sum();"></td>
+<td>$<input type=number ID="QD" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>Quarters</td>
@@ -46,8 +46,8 @@ input[type=number]{
 <td><input type=number ID="QQRC" onChange="mult(this.id,10,'QQrval');add('QQrowval','QQrval','QQ',1);">
 <input type=hidden ID="QQrval"></td>
 <td></td>
-<td>$<input type=number ID="QQ" style=number onChange="sum();"></td>
-<td><b>$</b><input type=number ID="coinvalue"></td>
+<td>$<input type=number ID="QQ" style=number onChange="sum();" tabIndex=-1></td>
+<td><b>$</b><input type=number ID="coinvalue" tabIndex=-1></td>
 </tr>
 <th><th>Paper</th><th>Banded</th><th>Loose</th><th>Total</th><tr>
 <script>
@@ -78,28 +78,28 @@ sum();
 <td><input type=number ID="Opaper" style=number onChange="cash('O',100,20,1);"></td>
 <td><input type=number ID="Obanded" style=number onChange="cash('O',100,20,1);"></td>
 <td><input type=number ID="Oclip" style=number onChange="cash('O',100,20,1);"></td>
-<td>$<input type=number ID="O" style=number onChange="sum();"></td>
+<td>$<input type=number ID="O" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>Five</td>
 <td><input type=number ID="Fpaper" style=number onChange="cash('F',500,100,5);"></td>
 <td><input type=number ID="Fbanded" style=number onChange="cash('F',500,100,5);"></td>
 <td><input type=number ID="Fclip" style=number onChange="cash('F',500,100,5);"></td>
-<td>$<input type=number ID="F" style=number onChange="sum();"></td>
+<td>$<input type=number ID="F" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>Tens</td>
 <td><input type=number ID="Tpaper" style=number onChange="cash('T',500,100,10);"></td>
 <td><input type=number ID="Tbanded" style=number onChange="cash('T',500,100,10);"></td>
 <td><input type=number ID="Tclip" style=number onChange="cash('T',500,100,10);"></td>
-<td>$<input type=number ID="T" style=number onChange="sum();"></td>
+<td>$<input type=number ID="T" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>Twenty</td>
-<td><input type=number ID="TWpaper" style=number onChange="cash('TW',2000,500,20);"></td>
+<td><input type=number ID="TWpaper" style=number onChange="cash('TW',2000,500,20);" tabIndex=-1></td>
 <td><input type=number ID="TWbanded" style=number onChange="cash('TW',2000,500,20);"></td>
 <td><input type=number ID="TWclip" style=number onChange="cash('TW',2000,500,20);"></td>
-<td>$<input type=number ID="TW" style=number onChange="sum();"></td>
+<td>$<input type=number ID="TW" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>50</td>
