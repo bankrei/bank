@@ -274,7 +274,6 @@ document.getElementById('coinonetargetset').value=coinonetarget;
 </table>
 <input type="button" value="Finish Drawer" onClick="movedep();">
 
-<input type=hidden value=1 id=hidedrawercounter>
 <script>
 setTarget();
 
@@ -295,8 +294,8 @@ document.getElementById(temploc).value=Number(document.getElementById(temploc).v
 }
 }
 
-var drawernumber=document.getElementById('hidedrawercounter').value;
-	
+var drawernumber=1
+document.getElementById('whichdrawer').value=drawernumber;
 var saved=[0];
 function movedep(){
 var cash='drawercash'+drawernumber;
@@ -309,7 +308,6 @@ var lastcoin=document.getElementById('coin').value;
 var lastone=document.getElementById('OL').value;
 saved[drawernumber]='Pennies:'+lastP+'  Nickels:'+lastN+'  Dimes:'+lastD+'  Quarters:'+lastQ+'  COIN TOTAL:'+lastcoin+' Singles:'+lastone;
 drawernumber=Number(drawernumber)+1;
-document.getElementById('hidedrawercounter').value=drawernumber;	
 document.getElementById('whichdrawer').value=drawernumber;
 document.getElementById(cash).value=document.getElementById('DepDol').value;
 document.getElementById(coin).value=document.getElementById('coinage2').value;
@@ -343,7 +341,8 @@ document.getElementById('deposittotal').value=(Number(document.getElementById('d
 </script>
 </form>
 <form name=deposit>
-Working on Drawer #<input type=number value=1 id=whichdrawer onChange="drawernumber=this.value";><span id=shopswitch onClick="fivetarget=5;tentarget=3;twentytarget=0;coinonetarget=45;setTarget();this.style.display='none';frontlineswitch.style.display='inline';">Frontline drawer</span>
+
+	Working on Drawer #<input type=number value=0 id=whichdrawer onChange="drawernumber=this.value";><span id=shopswitch onClick="fivetarget=5;tentarget=3;twentytarget=0;coinonetarget=45;setTarget();this.style.display='none';frontlineswitch.style.display='inline';">Frontline drawer</span>
 
 <span id=frontlineswitch onClick="fivetarget=10;tentarget=5;twentytarget=7;coinonetarget=60;setTarget();this.style.display='none';shopswitch.style.display='inline';" style="display:none">Shop drawer</span>
 
