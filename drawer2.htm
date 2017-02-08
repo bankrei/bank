@@ -134,7 +134,7 @@ document.getElementById('coinonetargetset').value=coinonetarget;
 <form id=drawer>
 <table>
 <tr>
-<th>Value</th><th>Roll #</th><th>Loose#</th><th>Drawer</th><th bgcolor=black rowspan=14></th><TH>Deposit</th></tr>
+<th>Value</th><th onClick="document.getElementById('PR').value=1;document.getElementById('NR').value=1;document.getElementById('DR').value=1;document.getElementById('QR').value=1;change();">Roll #</th><th>Loose#</th><th>Drawer</th><th bgcolor=black rowspan=14></th><TH>Deposit</th></tr>
 <tr>
 <td onClick="if(document.getElementById('PR').value==1){document.getElementById('PR').value=2}else{document.getElementById('PR').value=1};change();">Pennies</td>
 <td><input type=number ID="PR" onChange="change();"></td>
@@ -274,6 +274,7 @@ document.getElementById('coinonetargetset').value=coinonetarget;
 </table>
 <input type="button" value="Finish Drawer" onClick="movedep();">
 
+<input type=hidden value=1 name=hidedrawercounter>
 <script>
 setTarget();
 
@@ -294,7 +295,8 @@ document.getElementById(temploc).value=Number(document.getElementById(temploc).v
 }
 }
 
-var drawernumber=1;
+var drawernumber=document.getElementById('hidedrawercounter').value;
+	
 var saved=[0];
 function movedep(){
 var cash='drawercash'+drawernumber;
@@ -307,6 +309,7 @@ var lastcoin=document.getElementById('coin').value;
 var lastone=document.getElementById('OL').value;
 saved[drawernumber]='Pennies:'+lastP+'  Nickels:'+lastN+'  Dimes:'+lastD+'  Quarters:'+lastQ+'  COIN TOTAL:'+lastcoin+' Singles:'+lastone;
 drawernumber=Number(drawernumber)+1;
+document.getElementById('hidedrawercounter').value=drawernumber;	
 document.getElementById('whichdrawer').value=drawernumber;
 document.getElementById(cash).value=document.getElementById('DepDol').value;
 document.getElementById(coin).value=document.getElementById('coinage2').value;
