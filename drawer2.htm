@@ -10,6 +10,8 @@ var fivetarget=10;
 var tentarget=5;
 var twentytarget=7;
 var coinonetarget=60;
+	
+var drawernumber=1;
 function change(){
 document.getElementById('P').value=(Number(document.getElementById('PR').value)*.5+Number(document.getElementById('PL').value)*.01).toFixed(2);
 document.getElementById('N').value=(Number(document.getElementById('NR').value)*2+Number(document.getElementById('NL').value)*.05).toFixed(2);
@@ -277,7 +279,6 @@ var temploc='rep'+drawernumber;
 document.getElementById(temploc).value=Number(document.getElementById(temploc).value)+Number(amt);
 }
 }
-var drawernumber=Number(document.getElementById('whichdrawer').value);
 var saved=[0];
 function movedep(){
 var cash='drawercash'+drawernumber;
