@@ -277,7 +277,7 @@ var temploc='rep'+drawernumber;
 document.getElementById(temploc).value=Number(document.getElementById(temploc).value)+Number(amt);
 }
 }
-var drawernumber=1;
+var drawernumber=Number(document.getElementById('whichdrawer').value);
 var saved=[0];
 function movedep(){
 var cash='drawercash'+drawernumber;
