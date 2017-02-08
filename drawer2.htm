@@ -10,7 +10,6 @@ var fivetarget=10;
 var tentarget=5;
 var twentytarget=7;
 var coinonetarget=60;
-
 function change(){
 document.getElementById('P').value=(Number(document.getElementById('PR').value)*.5+Number(document.getElementById('PL').value)*.01).toFixed(2);
 document.getElementById('N').value=(Number(document.getElementById('NR').value)*2+Number(document.getElementById('NL').value)*.05).toFixed(2);
@@ -18,10 +17,8 @@ document.getElementById('D').value=(Number(document.getElementById('DR').value)*
 document.getElementById('Q').value=(Number(document.getElementById('QR').value)*10+Number(document.getElementById('QL').value)*.25).toFixed(2);
 sum();
 }
-
 function mult(what,multi,spot)
 {document.getElementById(spot).value=multi*Number(document.getElementById(what).value);sum();};
-
 function sum(){
 document.getElementById('coin').value=(Number(document.getElementById('P').value)+Number(document.getElementById('N').value)+Number(document.getElementById('D').value)+Number(document.getElementById('Q').value)).toFixed(2);
 document.getElementById('coinonecount').value=(Number(document.getElementById('P').value)+Number(document.getElementById('N').value)+Number(document.getElementById('D').value)+Number(document.getElementById('Q').value)+Number(document.getElementById('OL').value)).toFixed(2);
@@ -44,9 +41,7 @@ if(singleneed<1)
 	else
 	{document.getElementById('Odep').value='need $'+singleneed;
 	document.getElementById('rns').value=singleneed;}
-
 }
-
 function sumd(){
 if (document.getElementById('5count').value>fivetarget-1)
 {document.getElementById('5delta').value=(Number(document.getElementById('5count').value)-fivetarget)*5;
@@ -76,17 +71,14 @@ var totaldep=Number(document.getElementById('20delta').value)+Number(document.ge
 document.getElementById('DepDol').value=totaldep;
 document.getElementById('rn').value=(fivetarget*5+tentarget*10+twentytarget*20)-Number(document.getElementById('W').value)-Number(document.getElementById('T').value)-Number(document.getElementById('F').value);
 if(document.getElementById('rn').value<0){document.getElementById('rn').value=0;}
-
 if(document.getElementById('20count').value>twentytarget)
 {document.getElementById('20break').style.display="inline";}
 else
 {document.getElementById('20break').style.display="none";}
-
 if(document.getElementById('10count').value>tentarget)
 {document.getElementById('10break').style.display="inline";}
 else
 {document.getElementById('10break').style.display="none";}
-
 if(document.getElementById('5count').value>fivetarget)
 {document.getElementById('5break').style.display="inline";}
 else
@@ -102,7 +94,6 @@ else
 mult('50C',50,'a50');
 mult('100C',100,'a100');
 }
-
 function mc(whatbills,denom)
 {var denomer=denom+'break'
 	var intos=whatbills.toString();
@@ -116,17 +107,12 @@ document.getElementById('OL').value=Number(document.getElementById('OL').value)+
 document.getElementById(denomer).selectedIndex=0;
 sum();sumd();
 }
-
-
 function setTarget(){
 document.getElementById('fivetargetset').value=fivetarget;
 document.getElementById('tentargetset').value=tentarget;
 document.getElementById('twentytargetset').value=twentytarget;
 document.getElementById('coinonetargetset').value=coinonetarget;
 }
-
-
-
 </script>
 
 </head>
@@ -276,8 +262,6 @@ document.getElementById('coinonetargetset').value=coinonetarget;
 
 <script>
 setTarget();
-
-
 function repLoan(amt,type){
 var r=confirm('Replenshiment loan of $'+amt+'?')
 if (r==true){
@@ -293,9 +277,7 @@ var temploc='rep'+drawernumber;
 document.getElementById(temploc).value=Number(document.getElementById(temploc).value)+Number(amt);
 }
 }
-
-var drawernumber=1
-document.getElementById('whichdrawer').value=drawernumber;
+var drawernumber=1;
 var saved=[0];
 function movedep(){
 var cash='drawercash'+drawernumber;
@@ -320,7 +302,6 @@ document.getElementById('20break').style.display="none";
 document.getElementById('50break').style.display="none";
 document.getElementById('100break').style.display="none";
 }
-
 function adddeposits(){
 document.getElementById('cashtotal').value=Number(document.getElementById('drawercash1').value)+Number(document.getElementById('drawercash2').value)+Number(document.getElementById('drawercash3').value)+Number(document.getElementById('drawercash4').value)+Number(document.getElementById('drawercash5').value)+Number(document.getElementById('drawercash6').value)+Number(document.getElementById('drawercash7').value);
 document.getElementById('cointotal').value=Number(document.getElementById('drawercoin1').value)+Number(document.getElementById('drawercoin2').value)+Number(document.getElementById('drawercoin3').value)+Number(document.getElementById('drawercoin4').value)+Number(document.getElementById('drawercoin5').value)+Number(document.getElementById('drawercoin6').value)+Number(document.getElementById('drawercoin7').value);
@@ -341,8 +322,7 @@ document.getElementById('deposittotal').value=(Number(document.getElementById('d
 </script>
 </form>
 <form name=deposit>
-
-	Working on Drawer #<input type=number value=0 id=whichdrawer onChange="drawernumber=this.value";><span id=shopswitch onClick="fivetarget=5;tentarget=3;twentytarget=0;coinonetarget=45;setTarget();this.style.display='none';frontlineswitch.style.display='inline';">Frontline drawer</span>
+Working on Drawer #<input type=number value=1 id=whichdrawer onChange="drawernumber=this.value";><span id=shopswitch onClick="fivetarget=5;tentarget=3;twentytarget=0;coinonetarget=45;setTarget();this.style.display='none';frontlineswitch.style.display='inline';">Frontline drawer</span>
 
 <span id=frontlineswitch onClick="fivetarget=10;tentarget=5;twentytarget=7;coinonetarget=60;setTarget();this.style.display='none';shopswitch.style.display='inline';" style="display:none">Shop drawer</span>
 
