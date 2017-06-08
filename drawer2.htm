@@ -322,7 +322,9 @@ document.getElementById('deposittotal').value=(Number(document.getElementById('d
 }
 	
 function expectation(expect){
-document.getElementById('depdif').value=document.getElementById('deposittotal').value-expect;}	
+document.getElementById('depdif').value=document.getElementById('deposittotal').value-expect;
+document.getElementById('depdif').value=Number(document.getElementById('depdif').value).toFixed(2);
+}	
 </script>
 </form>
 <form name=deposit>
