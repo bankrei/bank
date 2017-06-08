@@ -320,6 +320,9 @@ document.getElementById('depositcointotal').value=document.getElementById('coint
 document.getElementById('depositcashtotal').value=(Number(document.getElementById('cashtotal').value)-Number(document.getElementById('loans').value)-Number(document.getElementById('replenishments').value));
 document.getElementById('deposittotal').value=(Number(document.getElementById('depositcointotal').value)+Number(document.getElementById('depositcashtotal').value));
 }
+	
+function expectation(expect){
+document.getElementById('depdif').value=document.getElementById('deposittotal').value-expect;}	
 </script>
 </form>
 <form name=deposit>
@@ -341,8 +344,10 @@ Working on Drawer #<input type=number value=1 id=whichdrawer onChange="drawernum
 <tr><td colspan=3 bgcolor=black></td></tr>
 <tr><td>Loan Paid</td><td><input type=number id=loans></td></tr>
 <tr><td>Replenish Paid</td><td><input type=number id=replenishments></td></tr>
-<tr><td>Deposit</td><td><input type=number id=depositcashtotal></td><td><input type=number id=depositcointotal></td><td colspan=3><input size=7 id=deposittotal></td></tr>
-</table>
+<tr><td>Deposit</td><td><input type=number id=depositcashtotal></td><td><input type=number id=depositcointotal></td>
+	<td colspan=3><input size=7 id=deposittotal></td></tr>
+<tr><td>Expected</td><td><input type=number id=expecteddeposit onChange="expectation(this.value)";></td><td colspan=3>Diff:<input size=7 id=depdif></td></tr>
+	</table>
 <a href="safe.htm" target=new>Count Safe</a>
 
 </form>
