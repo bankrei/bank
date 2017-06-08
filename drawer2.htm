@@ -319,6 +319,7 @@ document.getElementById('grandtotal').value=document.getElementById('cashtotal')
 document.getElementById('depositcointotal').value=document.getElementById('cointotal').value;
 document.getElementById('depositcashtotal').value=(Number(document.getElementById('cashtotal').value)-Number(document.getElementById('loans').value)-Number(document.getElementById('replenishments').value));
 document.getElementById('deposittotal').value=(Number(document.getElementById('depositcointotal').value)+Number(document.getElementById('depositcashtotal').value));
+expectation(document.getElementById('expecteddeposit').value);
 }
 	
 function expectation(expect){
