@@ -14,18 +14,18 @@ input[type=number]{
 <th>Value</th><th>Row #</th><th>Roll #</th><th>Value</th><th bgcolor=black rowspan=14></th><th>Total</th></tr>
 <tr>
 <td>Pennies</td>
-<td><input type=number ID="QPRow" onChange="mult(this.id,5,'QProwval');add('QProwval','QPRC','QP',1);">
+<td><input type=number ID="QPRow" onChange="mult(this.id,5,'QProwval');add('QProwval','QPRC','QP',1);" tabindex=1>
 <input type=hidden ID="QProwval"></td>
-<td><input type=number ID="QPRC" onChange="mult(this.id,.5,'QPrval');add('QProwval','QPrval','QP',1);">
+<td><input type=number ID="QPRC" onChange="mult(this.id,.5,'QPrval');add('QProwval','QPrval','QP',1);" tabindex=2>
 <input type=hidden ID="QPrval"></td>
 <td></td>
 <td>$<input type=number ID="QP" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>Nickels</td>
-<td><input type=number ID="QNRow" onChange="mult(this.id,20,'QNrowval');add('QNrowval','QNRC','QN',1);">
+<td><input type=number ID="QNRow" onChange="mult(this.id,20,'QNrowval');add('QNrowval','QNRC','QN',1);" tabindex=3>
 <input type=hidden ID="QNrowval"></td>
-<td><input type=number ID="QNRC" onChange="mult(this.id,2,'QNrval');add('QNrowval','QNrval','QN',1);">
+<td><input type=number ID="QNRC" onChange="mult(this.id,2,'QNrval');add('QNrowval','QNrval','QN',1);" tabindex=4>
 <input type=hidden ID="QNrval"></td>
 <td></td>
 <td>$<input type=number ID="QN" style=number onChange="sum();" tabIndex=-1></td>
