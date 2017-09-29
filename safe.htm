@@ -106,7 +106,7 @@ sum();
 <td><input type=hidden ID="FDpaper" style=number onChange="cash('FD',5000,1000,50);"></td>
 <td><input type=hidden ID="FDbanded" style=number onChange="cash('FD',5000,1000,50);"></td>
 <td><input type=number ID="FDclip" style=number onChange="cash('FD',5000,1000,50);"></td>
-<td>$<input type=number ID="FD" style=number onChange="sum();"></td>
+<td>$<input type=number ID="FD" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr>
 <td>100</td>
@@ -114,7 +114,7 @@ sum();
 <td><input type=hidden ID="OHbanded" style=number onChange="cash('OH',10000,2000,100);"></td>
 <td><input type=number ID="OHclip" style=number onChange="cash('OH',10000,2000,100);"></td>
 <td>$<input type=number ID="OH" style=number onChange="sum();"></td>
-<td>$<input type=number ID="cashvalue" style=number onChange="sum();"></td>
+<td>$<input type=number ID="cashvalue" style=number onChange="sum();" tabIndex=-1></td>
 </tr>
 <tr><th colspan=7 bgcolor=black></th></tr>
 <tr><td><td><td><td><td><td>Total:<td><b>$</b><input type=number id="total"></td>
